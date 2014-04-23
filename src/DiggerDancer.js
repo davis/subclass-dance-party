@@ -55,7 +55,7 @@ DiggerDancer.prototype.chaseBaller = function(cs, fb, fd) {
 // if digger gets within 10 px of a baller, digger takes $10 from baller
 // only happens if baller has enough money (> $10)
 DiggerDancer.prototype.dig = function(baller, distance) {
-  if(distance <= 10 && baller.money > 10) {
+  if(distance <= 10 && baller.money >= 10) {
     baller.money -= 10;
     this.money += 10;
     updateSideBarEntry(baller);
